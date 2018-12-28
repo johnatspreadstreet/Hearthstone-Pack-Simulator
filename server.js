@@ -3,9 +3,10 @@
 const express = require('express');
 
 const { PORT } = require('./config');
-const router = require('./routes/notes.router');
+const cardsRouter = require('./router/cards.router');
 
 const app = express();
+const cors = require('cors');
 
 // Create a static webserver
 app.use(express.static('public'));
@@ -13,8 +14,11 @@ app.use(express.static('public'));
 // Parse request body
 app.use(express.json());
 
+// Allow CORS
+app.use(cors());
+
 // Mount router on "/api"
-app.use('/api', router);
+app.use('/api', cardsRouter);
 
 // Catch-all 404
 app.use(function (req, res, next) {

@@ -16,5 +16,10 @@
   "bugs": {
     "url": "https://github.com/johnatspreadstreet/boilerplate/issues"
   },
-  "homepage": "https://github.com/johnatspreadstreet/boilerplate#readme"
+  "homepage": "https://github.com/johnatspreadstreet/boilerplate#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "cors": "^2.8.5",
+    "express": "^4.16.4"
+  }
 }
